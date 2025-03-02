@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://aakrutidesign.netlify.app/sitemap.xml
