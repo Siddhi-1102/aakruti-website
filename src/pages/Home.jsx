@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -151,12 +152,12 @@ const Home = () => {
         <p className="text-gray-600 mt-4">
           Contact us today to discuss your next project.
         </p>
-        <a
-          href="/contact"
-          className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-transform hover:scale-105"
+        <Link
+          to="/contact"
+          className="mt-8 inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-transform hover:scale-105"
         >
           Get a Free Consultation
-        </a>
+        </Link>
       </div>
     </div>
   );
