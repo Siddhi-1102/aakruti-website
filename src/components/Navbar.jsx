@@ -8,8 +8,15 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white py-4 px-6">
       <div className="flex justify-between items-center">
-        {/* Logo */}
-        <h1 className="text-xl font-bold">Aakruti Design and Buildcon</h1>
+        {/* Logo and Title */}
+        <div className="flex items-center space-x-3">
+          <img
+            src="/logo.png"
+            alt="Aakruti Design Logo"
+            className="h-12 w-auto"
+          />
+          <h1 className="text-xl font-bold">Aakruti Design and Buildcon</h1>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
