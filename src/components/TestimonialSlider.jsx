@@ -31,15 +31,17 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-12 px-4">
+    <div className="max-w-4xl mx-auto mt-12 px-4 sm:px-6 lg:px-8">
       <Slider {...settings}>
         {testimonials.map((item, index) => (
           <div
             key={index}
-            className="p-6 bg-white bg-opacity-90 rounded-lg shadow-md text-center"
+            className="p-6 bg-white bg-opacity-90 rounded-lg shadow-md text-center mx-2 sm:mx-4"
           >
-            <p className="text-gray-700 italic">"{item.quote}"</p>
-            <h4 className="mt-4 text-gray-900 font-semibold">
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg italic">
+              "{item.quote}"
+            </p>
+            <h4 className="mt-4 text-gray-900 font-semibold text-base sm:text-lg">
               - {item.author}
             </h4>
           </div>

@@ -25,7 +25,9 @@ const Gallery = () => {
         <p className="text-lg text-gray-600 mb-8">
           Explore our latest designs and projects.
         </p>
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        {/* Responsive Image Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {images.map((src, index) => (
             <div
               key={index}
@@ -35,7 +37,7 @@ const Gallery = () => {
               <img
                 src={src}
                 alt={`Gallery ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-auto aspect-[4/3] object-cover rounded-lg"
               />
               <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white font-semibold">
                 View Full Image
@@ -47,18 +49,20 @@ const Gallery = () => {
 
       {/* Full Image View */}
       {selectedImage && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
+        <div className="fixed inset-0 flex flex-col items-center justify-center bg-black bg-opacity-90 z-50 px-4">
           <button
-            className="absolute top-6 right-6 text-white text-4xl font-bold cursor-pointer z-50 hover:text-gray-300"
+            className="absolute top-4 right-4 text-white text-4xl sm:text-5xl font-bold cursor-pointer hover:text-gray-300"
             onClick={() => setSelectedImage(null)}
           >
             ×
           </button>
-          <img
-            src={selectedImage}
-            alt="Selected"
-            className="max-w-full max-h-full object-contain"
-          />
+          <div className="max-w-full max-h-screen flex items-center justify-center">
+            <img
+              src={selectedImage}
+              alt="Selected"
+              className="w-auto h-auto max-w-[95vw] max-h-[90vh] object-contain rounded-lg shadow-lg"
+            />
+          </div>
         </div>
       )}
     </div>
