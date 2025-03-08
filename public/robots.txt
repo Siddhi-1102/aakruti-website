@@ -1,3 +1,4 @@
 User-agent: *
-Disallow:
-Sitemap: https://aakrutidesign.netlify.app/sitemap.xml
+Allow: /
+Disallow: /admin/
+Sitemap: https://aakrutidesignbuildcon.com/sitemap.xml
